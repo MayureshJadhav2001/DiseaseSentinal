@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Symptoms</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Select Symptoms for {{ disease.capitalize() }}</h2>
+    <form method="post">
+        {% for symptom in symptoms_list %}
+            <input type="checkbox" name="symptoms" value="{{ symptom }}"> {{ symptom }}<br>
+        {% endfor %}
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>

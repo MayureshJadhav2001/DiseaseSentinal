@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Prediction Result</h2>
+    <p><strong>Disease:</strong> {{ disease.capitalize() }}</p>
+    <p><strong>Symptoms Selected:</strong> {{ symptoms | join(", ") }}</p>
+    <p><strong>Condition:</strong> {{ condition }}</p>
+    <p><strong>Health Advice:</strong> {{ advice }}</p>
+    <br>
+    <a href="/select_disease">Try Again</a> | <a href="/logout">Logout</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Disease</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Select a Disease</h2>
+    <form method="post">
+        <select name="disease">
+            <option value="heart">Heart Disease</option>
+            <option value="diabetes">Diabetes</option>
+            <option value="thyroid">Thyroid</option>
+        </select><br>
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>

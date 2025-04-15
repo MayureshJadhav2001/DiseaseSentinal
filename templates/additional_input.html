@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Additional Input</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Provide Additional Details</h2>
+    <form method="post">
+        {% if disease == "thyroid" %}
+            <label>Enter TSH Level (mIU/L):</label>
+            <input type="number" name="tsh" step="0.1" required>
+        {% elif disease == "heart" %}
+            <label>Enter Systolic BP:</label>
+            <input type="number" name="systolic" required><br>
+            <label>Enter Diastolic BP:</label>
+            <input type="number" name="diastolic" required>
+        {% elif disease == "diabetes" %}
+            <label>Enter Blood Sugar Level (mg/dL):</label>
+            <input type="number" name="sugar" required>
+        {% endif %}
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
